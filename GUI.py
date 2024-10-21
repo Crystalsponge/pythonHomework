@@ -65,7 +65,7 @@ def generate_chart(chart_type):
         st.write("""The chart shows that the majority of people have completed at least a high school education, with a significant number pursuing higher education. However, there is still a portion of the population with lower levels of education. This suggests that while education levels have increased over time, there is still room for improvement in terms of educational attainment.
 """)
     elif chart_type == "Age and Marital status":
-        st.scatter_chart(X["age","marital-status"], x = "age", y="marital-status")
+        st.scatter_chart(X[["age","marital-status"]], x = "age", y="marital-status")
         st.write("The chart shows that married-civ-spouse is the most common marital status among high-income earners, followed by never-married. Divorce and separation are less common among this group. Widowed is the least common marital status. This suggests a potential association between marriage and higher income levels, but individual circumstances and factors like education, experience, and industry also play a significant role.")
     elif chart_type == "Hours per week":
         st.pyplot(fig)
